@@ -1,19 +1,19 @@
 const DIFFERENTIATORS = [
   {
     title: "AI-powered strike/size selection",
-    body: "Your strongest differentiator, no TradFi gold product dynamically picks strike and size the way this does. But right now it's a claim with zero data behind it. The move: the first 1-2 completed epochs should be pre-packaged as a dedicated recap, strike chosen, premium captured, realized APY, ready to publish the moment they close. That's the point it stops being marketing copy and becomes proof.",
+    body: "One of the few products picking strike dynamically, and the only one pairing that with AI-driven size selection on a 14-day cycle, nobody else runs that combination. Right now it's unproven, no epoch has closed yet. The move: package the first 1-2 completed epochs as a dedicated recap the moment they close, strike chosen, premium captured, realized APY. That's the point it stops being a claim and becomes proof.",
   },
   {
     title: "Auditor",
-    body: 'Still open in the doc, "top-tier firm, TBD." Worth pushing to lock in a name with actual derivatives/options experience, Spearbit or Trail of Bits both fit given the Opyn Gamma base. A recognizable name does two things at once: real technical assurance, and a genuine content moment, a teaser when the audit kicks off, a full recap when the report lands.',
+    body: 'Still open, the doc only says "top-tier firm, TBD." Worth locking in a name with real derivatives experience, firms like Spearbit or Trail of Bits would fit well given the Opyn Gamma base, though that\'s a suggestion to vet, not a done deal. A recognizable name does two things at once, real technical assurance, and a genuine content moment, a teaser when the audit starts, a full recap when the report lands.',
   },
   {
     title: "Compounding/income toggle",
-    body: "Already built, so the point isn't the feature, it's where it sits. Right now it's a mechanics footnote. Almost no TradFi covered-call product lets the user choose or switch their payout structure at all, that's a headline claim, not a detail buried in section 4.3.",
+    body: "Already built, so the opportunity isn't the feature, it's the framing. Most TradFi products only offer payout flexibility indirectly, through a broker's dividend reinvestment setting. Enhanced builds it natively into the vault, switchable anytime, no broker involved. That's a headline claim, not a detail sitting quietly in section 4.3.",
   },
   {
     title: "Lead with comparison",
-    body: "The strongest top-of-funnel asset in the entire document is sitting on page 4. Pull the GLDI/IAUI/ZWGD/IGLD comparison to the front and reduce it to one line: same trade Wall Street already runs on gold ETFs, half the fee, no KYC, biweekly instead of monthly. Lands without requiring anyone to understand options first.",
+    body: "The strongest top-of-funnel asset in the document is sitting two-thirds of the way through it, in the fine print of section 4.6. Pull the GLDI/IAUI/ZWGD/IGLD comparison to the front and reduce it to one line: same trade Wall Street already runs on gold ETFs, up to 40% cheaper, no KYC, biweekly instead of monthly. Lands without requiring anyone to understand options first.",
   },
 ];
 
