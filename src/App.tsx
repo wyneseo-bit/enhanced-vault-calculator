@@ -4,6 +4,7 @@ import { calculate, type PayoutMode } from "./lib/calc";
 import { InputsPanel, type HorizonDays } from "./components/InputsPanel";
 import { ComparisonTable } from "./components/ComparisonTable";
 import { Differentiators } from "./components/Differentiators";
+import { AudienceSegmentsTable } from "./components/AudienceSegmentsTable";
 import { Disclaimer } from "./components/Disclaimer";
 
 function App() {
@@ -72,6 +73,8 @@ function App() {
         </section>
 
         <Differentiators />
+
+        <AudienceSegmentsTable />
 
         {/* CTA */}
         <section className="mb-8 flex justify-center">
