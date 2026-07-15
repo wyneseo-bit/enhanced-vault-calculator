@@ -20,7 +20,7 @@ const DIFFERENTIATORS = [
 export function Differentiators() {
   return (
     <section className="mb-8">
-      <h2 className="mb-4 text-lg font-medium">Why it's structurally different</h2>
+      <h2 className="mb-4 text-lg font-medium">Marketing/selling direction</h2>
       <div className="space-y-4">
         {DIFFERENTIATORS.map((item, i) => (
           <div
