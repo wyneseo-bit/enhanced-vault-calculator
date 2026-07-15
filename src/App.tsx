@@ -92,16 +92,6 @@ function App() {
           </>
         )}
 
-        {/* CTA */}
-        <section className="mb-8 flex justify-center">
-          <a
-            href="#"
-            className="rounded-full bg-ink px-8 py-3 text-sm font-semibold text-cream shadow-lg shadow-ink/10 transition-colors hover:bg-ink/90 dark:bg-mist dark:text-ink dark:shadow-mist/10 dark:hover:bg-mist/90"
-          >
-            Learn more
-          </a>
-        </section>
-
         {/* Disclaimer */}
         <Disclaimer />
       </div>
