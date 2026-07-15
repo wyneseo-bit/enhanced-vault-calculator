@@ -5,13 +5,20 @@ import { InputsPanel, type HorizonDays } from "./components/InputsPanel";
 import { ComparisonTable } from "./components/ComparisonTable";
 import { Differentiators } from "./components/Differentiators";
 import { AudienceSegmentsTable } from "./components/AudienceSegmentsTable";
+import { TabNav } from "./components/TabNav";
 import { Disclaimer } from "./components/Disclaimer";
+
+const TABS = [
+  { id: "calculator", label: "Calculator" },
+  { id: "insights", label: "Why Enhanced & audience" },
+];
 
 function App() {
   const [depositUSD, setDepositUSD] = useState(10000);
   const [horizonDays, setHorizonDays] = useState<HorizonDays>(365);
   const [assumedGrossYieldPct, setAssumedGrossYieldPct] = useState(0.09);
   const [payoutMode, setPayoutMode] = useState<PayoutMode>("compounding");
+  const [activeTab, setActiveTab] = useState(TABS[0].id);
 
   const rows = useMemo(
     () =>
@@ -52,29 +59,38 @@ function App() {
           </p>
         </header>
 
-        {/* Inputs */}
-        <div className="mb-8">
-          <InputsPanel
-            depositUSD={depositUSD}
-            onDepositChange={setDepositUSD}
-            horizonDays={horizonDays}
-            onHorizonChange={setHorizonDays}
-            assumedGrossYieldPct={assumedGrossYieldPct}
-            onYieldChange={setAssumedGrossYieldPct}
-            payoutMode={payoutMode}
-            onPayoutModeChange={setPayoutMode}
-          />
-        </div>
+        <TabNav tabs={TABS} activeId={activeTab} onChange={setActiveTab} />
 
-        {/* Comparison table */}
-        <section className="mb-8">
-          <h2 className="mb-4 text-lg font-medium">Side-by-side comparison</h2>
-          <ComparisonTable rows={rows} />
-        </section>
+        {activeTab === "calculator" && (
+          <>
+            {/* Inputs */}
+            <div className="mb-8">
+              <InputsPanel
+                depositUSD={depositUSD}
+                onDepositChange={setDepositUSD}
+                horizonDays={horizonDays}
+                onHorizonChange={setHorizonDays}
+                assumedGrossYieldPct={assumedGrossYieldPct}
+                onYieldChange={setAssumedGrossYieldPct}
+                payoutMode={payoutMode}
+                onPayoutModeChange={setPayoutMode}
+              />
+            </div>
 
-        <Differentiators />
+            {/* Comparison table */}
+            <section className="mb-8">
+              <h2 className="mb-4 text-lg font-medium">Side-by-side comparison</h2>
+              <ComparisonTable rows={rows} />
+            </section>
+          </>
+        )}
 
-        <AudienceSegmentsTable />
+        {activeTab === "insights" && (
+          <>
+            <Differentiators />
+            <AudienceSegmentsTable />
+          </>
+        )}
 
         {/* CTA */}
         <section className="mb-8 flex justify-center">
