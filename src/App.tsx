@@ -3,7 +3,8 @@ import { PRODUCTS } from "./data/products";
 import { calculate, type PayoutMode } from "./lib/calc";
 import { InputsPanel, type HorizonDays } from "./components/InputsPanel";
 import { ComparisonTable } from "./components/ComparisonTable";
-import { ComparisonChart } from "./components/ComparisonChart";
+import { Differentiators } from "./components/Differentiators";
+import { AudienceSegments } from "./components/AudienceSegments";
 import { Disclaimer } from "./components/Disclaimer";
 
 function App() {
@@ -71,10 +72,9 @@ function App() {
           <ComparisonTable rows={rows} />
         </section>
 
-        {/* Chart */}
-        <section className="mb-8">
-          <ComparisonChart rows={rows} depositUSD={depositUSD} />
-        </section>
+        <Differentiators />
+
+        <AudienceSegments />
 
         {/* CTA */}
         <section className="mb-8 flex justify-center">
