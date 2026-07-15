@@ -39,10 +39,10 @@ function App() {
             <span className="normal-case tracking-normal">— PAXG Vol Income Vault by Enhanced</span>
           </div>
           <h1 className="text-2xl font-medium leading-tight sm:text-4xl">
-            Same trade Wall Street runs on gold ETFs.
-            <br className="hidden sm:block" />{" "}
-            <span className="font-serif italic text-accent">Half the fee.</span> No KYC. Biweekly
-            instead of monthly.
+            The gold trade Wall Street runs,{" "}
+            <span className="font-serif italic text-accent">
+              without the fee, the paperwork, or the wait.
+            </span>
           </h1>
         </header>
 
