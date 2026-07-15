@@ -44,6 +44,11 @@ function App() {
               without the fee, the paperwork, or the wait.
             </span>
           </h1>
+          <p className="mt-4 max-w-2xl text-sm text-ink-muted sm:text-base dark:text-mist-muted">
+            Plug in a deposit amount and time horizon to see how Enhanced's PAXG Vol Income
+            Vault stacks up against today's leading gold covered-call ETFs — fee, KYC
+            requirement, premium cycle, and projected net yield, side by side.
+          </p>
         </header>
 
         {/* Inputs */}
