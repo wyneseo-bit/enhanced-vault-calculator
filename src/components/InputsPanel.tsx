@@ -109,29 +109,45 @@ export function InputsPanel({
           <span className="block text-sm font-medium text-ink-muted dark:text-mist-muted">
             Payout mode
           </span>
-          <div className="group relative mt-2 flex rounded-lg border border-ink/15 bg-cream p-1 dark:border-mist/15 dark:bg-night">
-            <button
-              type="button"
-              onClick={() => onPayoutModeChange("compounding")}
-              className={`flex-1 rounded-md px-2 py-1.5 text-sm font-medium transition-colors ${
-                payoutMode === "compounding"
-                  ? "bg-accent text-white"
-                  : "text-ink-muted hover:text-ink dark:text-mist-muted dark:hover:text-mist"
-              }`}
-            >
-              Compounding
-            </button>
-            <button
-              type="button"
-              onClick={() => onPayoutModeChange("income")}
-              className={`flex-1 rounded-md px-2 py-1.5 text-sm font-medium transition-colors ${
-                payoutMode === "income"
-                  ? "bg-accent text-white"
-                  : "text-ink-muted hover:text-ink dark:text-mist-muted dark:hover:text-mist"
-              }`}
-            >
-              Income
-            </button>
+          <div className="mt-2 flex rounded-lg border border-ink/15 bg-cream p-1 dark:border-mist/15 dark:bg-night">
+            <div className="group relative flex-1">
+              <button
+                type="button"
+                onClick={() => onPayoutModeChange("compounding")}
+                className={`w-full rounded-md px-2 py-1.5 text-sm font-medium transition-colors ${
+                  payoutMode === "compounding"
+                    ? "bg-accent text-white"
+                    : "text-ink-muted hover:text-ink dark:text-mist-muted dark:hover:text-mist"
+                }`}
+              >
+                Compounding
+              </button>
+              <div
+                role="tooltip"
+                className="pointer-events-none absolute bottom-full left-1/2 z-30 mb-2 w-max max-w-[14rem] -translate-x-1/2 rounded-md bg-ink px-2 py-1 text-center text-xs text-cream opacity-0 shadow-lg transition-opacity duration-150 group-hover:opacity-100 group-focus-within:opacity-100 dark:bg-mist dark:text-ink"
+              >
+                Net yield is reinvested every cycle, so returns compound over the horizon.
+              </div>
+            </div>
+            <div className="group relative flex-1">
+              <button
+                type="button"
+                onClick={() => onPayoutModeChange("income")}
+                className={`w-full rounded-md px-2 py-1.5 text-sm font-medium transition-colors ${
+                  payoutMode === "income"
+                    ? "bg-accent text-white"
+                    : "text-ink-muted hover:text-ink dark:text-mist-muted dark:hover:text-mist"
+                }`}
+              >
+                Income
+              </button>
+              <div
+                role="tooltip"
+                className="pointer-events-none absolute bottom-full left-1/2 z-30 mb-2 w-max max-w-[14rem] -translate-x-1/2 rounded-md bg-ink px-2 py-1 text-center text-xs text-cream opacity-0 shadow-lg transition-opacity duration-150 group-hover:opacity-100 group-focus-within:opacity-100 dark:bg-mist dark:text-ink"
+              >
+                Net yield is paid out each cycle as cash — principal doesn't compound.
+              </div>
+            </div>
           </div>
           <p className="mt-1 text-xs text-ink-muted dark:text-mist-muted">
             Applies to Enhanced only — other products use a fixed payout structure.

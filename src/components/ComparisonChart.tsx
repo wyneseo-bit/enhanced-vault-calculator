@@ -97,7 +97,7 @@ export function ComparisonChart({ rows, depositUSD }: ComparisonChartProps) {
               width={80}
             />
             <Tooltip
-              formatter={(value) => currency.format(Number(value))}
+              formatter={(value) => [currency.format(Number(value)), "Final value"]}
               contentStyle={{
                 backgroundColor: theme.tooltipBg,
                 border: `1px solid ${theme.tooltipBorder}`,
@@ -105,6 +105,7 @@ export function ComparisonChart({ rows, depositUSD }: ComparisonChartProps) {
                 color: theme.tooltipText,
               }}
               labelStyle={{ color: theme.tooltipText }}
+              itemStyle={{ color: theme.tooltipText }}
             />
             <Bar dataKey="finalValue" radius={[6, 6, 0, 0]}>
               {data.map((entry) => (
