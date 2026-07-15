@@ -5,7 +5,7 @@ const DIFFERENTIATORS = [
   },
   {
     title: "Auditor",
-    body: 'Still open, the doc only says "top-tier firm, TBD." Worth locking in a name with real derivatives experience, firms like Spearbit or Trail of Bits would fit well given the Opyn Gamma base, though that\'s a suggestion to vet, not a done deal. A recognizable name does two things at once, real technical assurance, and a genuine content moment, a teaser when the audit starts, a full recap when the report lands.',
+    body: "Still open, the doc only says \"top-tier firm, TBD.\" Worth locking in a name with real derivatives experience, firms like Spearbit or Trail of Bits would fit well given the Opyn Gamma base, though that's a suggestion to vet, not a done deal. Failsafe is also worth strong consideration, they've audited several well-known companies, and there's an existing relationship with their founder that should make outreach and terms easier to close. A recognizable name does two things at once, real technical assurance, and a genuine content moment, a teaser when the audit starts, a full recap when the report lands.",
   },
   {
     title: "Compounding/income toggle",
