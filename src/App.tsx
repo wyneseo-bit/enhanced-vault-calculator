@@ -34,8 +34,9 @@ function App() {
         <header className="mb-8">
           <div className="mb-3 text-sm font-semibold uppercase tracking-widest text-ink-muted dark:text-mist-muted">
             <span className="font-serif text-lg italic text-accent normal-case tracking-normal">
-              Enhanced
-            </span>
+              Thesis Vault
+            </span>{" "}
+            <span className="normal-case tracking-normal">— PAXG Vol Income Vault by Enhanced</span>
           </div>
           <h1 className="text-2xl font-medium leading-tight sm:text-4xl">
             Same trade Wall Street runs on gold ETFs.
